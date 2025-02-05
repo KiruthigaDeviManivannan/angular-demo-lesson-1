@@ -1,0 +1,16 @@
+<p>Fun shopping with....best brands </p>
+<!-- <ul *ngFor="let shop of shopListObj">
+    <li>The shop {{shop.name}} with shop No {{shop.id}} is {{shop.status}}</li>
+</ul> -->
+<table class="table table-bordered" style="width: 40%;border: 1px solid;">
+    <tr>
+        <th>Shop Name</th>
+        <th>Shop ID</th>
+        <th>Shop Status</th>
+    </tr>
+    <tr *ngFor="let shop of shopListObj">
+        <td>{{shop.name}}</td>
+        <td>{{shop.id}}</td>
+        <td>{{shop.status}}</td>
+    </tr>
+</table>

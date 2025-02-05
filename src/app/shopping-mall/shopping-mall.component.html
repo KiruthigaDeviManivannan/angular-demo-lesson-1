@@ -1,0 +1,20 @@
+<h1>Here is my shopping mall - {{mallName}}</h1>
+<!--<input type="text" (input)="onUpdateNewShop($event)"/>-->
+<div style="display: flex;
+    flex-direction: row;
+    justify-content: 
+    flex-start;
+    align-items: start;
+    gap: 10px">
+    <input type="text" [(ngModel)]="shopName" name="createNewShop" class="form-control" style="width: 250px"/>
+    <button [disabled]="isActive" (click)="onCreateNewShop()" class="btn btn-primary" style="width: 150px">Add Shops</button>
+</div>
+
+
+<p *ngIf="isShopCreated;else noShop">{{createNewShop}}</p>
+<ng-template #noShop>
+    <p>No shop is available</p>
+</ng-template>
+{{shopList | json}}
+<app-shop [shopList]="shopList"></app-shop>
+{{shopList | json}}
